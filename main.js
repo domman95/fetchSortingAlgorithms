@@ -100,15 +100,14 @@ function getLastMonthTotal(arr) {
     x.sort((a,b) => a.id > b.id ? 1 : -1)
     result = x
 
-
     rowsCreator(x)
 }
 
 const sorting = (arr, para) => {
-    let x;
+    let sortedArr;
     searchField.value = ''
 
-    x = arr.map(item => {
+    sortedArr = arr.map(item => {
         item.id = Number(item.id)
         item.total = Number(item.total)
         item.average = Number(item.average)
@@ -119,14 +118,14 @@ const sorting = (arr, para) => {
     })
 
     if (isSorted[para]) {
-        x = arr.sort((a,b) => a[para] < b[para] ? 1 : -1)
+        sortedArr = arr.sort((a,b) => a[para] < b[para] ? 1 : -1)
         isSorted[para] = !isSorted[para]
     } else {
-        x = arr.sort((a,b) => a[para] > b[para] ? 1 : -1)
+        sortedArr = arr.sort((a,b) => a[para] > b[para] ? 1 : -1)
         isSorted[para] = !isSorted[para]
     }
 
-    rowsCreator(x)
+    rowsCreator(sortedArr)
 }
 
 const rowsCreator = (arr, regex, wordToMatch) => {
@@ -139,9 +138,9 @@ const rowsCreator = (arr, regex, wordToMatch) => {
 
     let loopStart = rows * (currentPage - 1)
 
-    let g = arr.slice(loopStart, loopStart + rows)
+    let slicedArrForOnePage = arr.slice(loopStart, loopStart + rows)
 
-    return g.map(item => {
+    return slicedArrForOnePage.map(item => {
 
         const row = document.createElement('div')
         row.classList.add('row')
@@ -162,11 +161,11 @@ const rowsCreator = (arr, regex, wordToMatch) => {
 function findMatches(wordToMatch, arr) {
     let regex;
     if (arr) {
-        let x =  arr.filter(item => {
+        let filteredMatches =  arr.filter(item => {
             regex = new RegExp(wordToMatch, 'gi');
             return item.city.match(regex) || item.total.match(regex) ||item.name.match(regex) || item.id.match(regex) || item.average.match(regex) || item.lastMonthTotal.match(regex)
         });
-        rowsCreator(x, regex, wordToMatch) 
+        rowsCreator(filteredMatches, regex, wordToMatch) 
     }    
 }
 
@@ -191,21 +190,6 @@ const paginationBtn = (page, arr, regex, wordToMatch) => {
         rowsCreator(arr, regex, wordToMatch)
     })
     return button
-}
-
-const list = (arr) => {
-    return arr.map(item => {
-        return `
-        <div class="data">
-        <div>${item.id}</div>
-        <div>${item.name}</div>
-        <div>${item.city}</div>
-        <div>${item.total}</div>
-        <div>${item.average}</div>
-        <div>${item.lastMonthTotal}</div>
-        </div>
-        `
-    })
 }
 
 const convertDate = (date) => {
