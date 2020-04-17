@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    position: relative;
+    width: 95vw;
+    padding-top: 110px;
+}
+
+.wrapper .header {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+.color {
+    background: yellow;
+}
+
+.input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    border: 1px solid black;
+    border-bottom: none;
+    padding: 0 20px;
+    background: #ddd;
+}
+
+.input div {
+    width: 100%;
+}
+
+.input div label {
+    font-size: 12px;
+}
+
+.input div input {
+    border: 1px solid black;
+    height: 30px;
+    outline: none;
+    border-radius: 0;
+    padding: 0 10px;
+    font-size: 16px;
+    width: 80%;
+}
+
+.input input::placeholder {
+    font-size: 12px;
+}
+
+.active {
+    background: #3232ff !important;
+    color: white !important;
+    border: none !important;
+    transform: scale(1.1);
+}
+
+
+.wrapper .header .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    border-right: none;
+    background: #3232ff;
+    font-size: 8px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+
+.wrapper .header .head:nth-last-child(1),
+.wrapper .listWrapper .row li:nth-last-child(1) {
+    border-right: 1px solid black !important;
+}
+
+.wrapper .listWrapper {
+    width: 100%;
+}
+
+.wrapper .listWrapper .row {
+    display: flex;
+
+}
+
+.wrapper .listWrapper .row:nth-of-type(odd) {
+    background: #ddd;
+}
+
+.wrapper .listWrapper .row li {
+    padding: 5px 0;
+    border: 1px solid black;
+    border-right: none;
+    border-top: none;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 8px;
+}
+
+.wrapper .listWrapper .row #id,
+.wrapper .header #id {
+    flex: 1;
+}
+
+.wrapper .listWrapper .row #name,
+.wrapper .header #name,
+.wrapper .listWrapper .row #city,
+.wrapper .header #city {
+    flex: 5;
+}
+
+.wrapper .listWrapper .row #total,
+.wrapper .header #total,
+.wrapper .listWrapper .row #average,
+.wrapper .header #average,
+.wrapper .listWrapper .row #lastMonthTotal,
+.wrapper .header #lastMonthTotal {
+    flex: 2;
+}
+
+
+.pagination {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.pagination button {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    border: 1px solid black;
+    background: white;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading p {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .wrapper .header .head {
+        font-size: 12px;
+    }
+
+    .wrapper .listWrapper .row li {
+        font-size: 12px;
+    }
+
+    .pagination button {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .input div label {
+        font-size: 16px;
+    }
+    
+    .input div input {
+        font-size: 16px;
+        width: 60%;
+    }
+
+    .input input::placeholder {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .wrapper .header .head {
+        font-size: 18px;
+    }
+
+    .wrapper .listWrapper .row li {
+        font-size: 16px;
+    }
+
+    .pagination button {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .input div label {
+        font-size: 20px;
+    }
+
+    .input div input {
+        font-size: 20px;
+        width: 40%;
+    }
+    .input input::placeholder {
+        font-size: 20px;
+    }
+}
