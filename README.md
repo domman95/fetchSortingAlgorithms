@@ -16,7 +16,7 @@ It use few algorithms to better manage fetched data.
 If you would like test the app directly on your browser please don't hesitate to clone this repository:
 
 ```bash
-    git clone 
+    git clone https://github.com/domman95/fetchSortingAlgorithms.git
 ```
 
 In case you use Visual Studio Code please install extension Live-Server
