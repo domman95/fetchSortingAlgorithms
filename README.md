@@ -1,4 +1,4 @@
-# DEMO
+# [DEMO](https://domman95.github.io/fetchSortingAlgorithms/)
 
 [Type to open demo](https://domman95.github.io/fetchSortingAlgorithms/)
 
