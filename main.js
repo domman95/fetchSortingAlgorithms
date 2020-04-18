@@ -165,6 +165,7 @@ function findMatches(wordToMatch, arr) {
             regex = new RegExp(wordToMatch, 'gi');
             return item.city.match(regex) || item.total.match(regex) ||item.name.match(regex) || item.id.match(regex) || item.average.match(regex) || item.lastMonthTotal.match(regex)
         });
+        
         rowsCreator(filteredMatches, regex, wordToMatch) 
     }    
 }
