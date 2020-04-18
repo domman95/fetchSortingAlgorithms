@@ -1,8 +1,4 @@
-# [DEMO](https://domman95.github.io/fetchSortingAlgorithms/)
-
-[Type to open demo](https://domman95.github.io/fetchSortingAlgorithms/)
-
-# fetch and sorting algorithms - test app
+# [fetch and sorting algorithms - test app (click to demo)](https://domman95.github.io/fetchSortingAlgorithms/)
 
 This app has been created for test fetch and asynchronous code.
 It use few algorithms to better manage fetched data.
