@@ -23,7 +23,7 @@ In case you use Visual Studio Code please install extension Live-Server
 
 # installation
 
-After clone the repository please do the next thing step by step:
+After clone the repository please do the command line step by step:
 
 ```bash
     $ npm install
