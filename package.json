@@ -1,0 +1,21 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "This app has been created for test fetch and asynchronous code.\r It use few algorithms to better manage fetched data.",
+  "scripts": {
+    "start": "browser-sync -s -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domman95/fetchSortingAlgorithms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/domman95/fetchSortingAlgorithms/issues"
+  },
+  "homepage": "https://github.com/domman95/fetchSortingAlgorithms#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
